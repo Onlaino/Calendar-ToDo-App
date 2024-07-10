@@ -4,7 +4,7 @@ import { useUser } from '../../hooks/useUserContext';
 import { useModal } from '../../hooks/useModal';
 import { TypeCalendarDay } from '../../utils/calendar.types';
 import { generateCalendar } from '../../utils/generateCalendar';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const CalendarCells = ({ date }: { date: Date }) => {
 	const { user } = useUser();
@@ -26,14 +26,24 @@ export const CalendarCells = ({ date }: { date: Date }) => {
 		setIsOpen(true);
 	};
 
+	const fetchCalendarDays = useCallback(async () => {
+		const calendarDays = await generateCalendar(date, user.tasks);
+		setCalendar(calendarDays);
+	}, [date, user.tasks, setCalendar]);
+
+	// useEffect(() => {
+	// 	async function fetchCalendarDays() {
+	// 		const calendarDays = await generateCalendar(date, user.tasks);
+	// 		setCalendar(calendarDays);
+	// 	}
+	// 	fetchCalendarDays().catch(console.error);
+	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
+	// }, [date, tasks, setTasks]);
+
 	useEffect(() => {
-		async function fetchCalendarDays() {
-			const calendarDays = await generateCalendar(date, user.tasks);
-			setCalendar(calendarDays);
-		}
 		fetchCalendarDays().catch(console.error);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [date, tasks, setTasks]);
+	}, [fetchCalendarDays]);
 
 	return (
 		<ul className='calendar__cells'>

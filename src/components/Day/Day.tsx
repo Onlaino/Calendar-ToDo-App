@@ -1,13 +1,9 @@
 import './Day.css'
 import { ITask } from '../../interfaces/tasks.interface'
-import { useUser } from '../../hooks/useUserContext'
 import { IDayProps } from './Day.props'
 import { useEffect, useMemo, useState } from 'react'
-import { useModal } from '../../hooks/useModal'
 
 export const Day = ({ date, tasks }: IDayProps) => {
-	const { user } = useUser()
-	const { setTasks } = useModal()
 	const [dayTasks, setDayTasks] = useState<ITask[]>([])
 
 	const calculateClassName = (task: ITask) => {
