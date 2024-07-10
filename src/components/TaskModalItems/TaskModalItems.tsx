@@ -32,7 +32,7 @@ export const TaskModalItem = ({
 					</div>
 				</div>
 			</div>
-			<p>{task.description}</p>
+			<p className='modal__content-item-descr'>{task.description}</p>
 		</div>
 	);
 }
