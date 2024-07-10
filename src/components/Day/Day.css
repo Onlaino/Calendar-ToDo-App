@@ -7,10 +7,13 @@
 }
 
 .calendar__cells-cell-tasks-item {
+	font-size: 14px;
 	overflow: hidden;
 	width: 100%;
-	border: 1px solid orange;
 	border-radius: var(--radius);
 	padding: 3px 7px;
 	margin-bottom: 4px;
+	span {
+		color: var(--blue);
+	}
 }

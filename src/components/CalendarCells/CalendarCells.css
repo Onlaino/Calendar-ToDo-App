@@ -19,7 +19,7 @@
 }
 
 .calendar__cells-cell:hover {
-	background-color: #eb9429;
+	background-color: var(--blue-light);
 	color: black;
 }
 
@@ -37,11 +37,13 @@
 	height: 30px;
 }
 
-
-
 .active {
-	border: 3px solid var(--primary);
+	border: 3px solid var(--blue);
 	color: black;
+}
+
+.dayOff {
+	color: red;
 }
 
 @media (max-width: 430px) {

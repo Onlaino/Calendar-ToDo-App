@@ -10,29 +10,31 @@
   margin-bottom: 5px;
 
 	p {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 
 .modal__content-item-title:after {
 	position: absolute;
 	content: '';
-	background-color: gray;
+	background-color: white;
 	bottom: -2px;
 	right: 0;
 	left: 0;
-	height: 1px;
+	height: 2px;
 }
 
 
 .modal__content-item-delete {
 	cursor: pointer;
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	span {
+		font-size: 20px;
+	}
 }
 
-.modal__content-item-delete:hover {
-	scale: 1.05;
-}
 
 .modal__content-item-icons {
 	display: flex;

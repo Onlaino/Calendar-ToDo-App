@@ -1,9 +1,12 @@
 :root {
 	/* colors */
 	--primary: #ffa500;
+	--primary-light: #fce0a2;
 	--gray-light: rgba(237, 237, 237, 0.214);
 	--gray-dark: #333333;
-
+	--blue-light: #cbe2f5;
+	--blue: #4067b1;
+	
 	/* helpers */
 	--radius: 10px;
 }
@@ -13,22 +16,24 @@
 	padding: 0;
 	box-sizing: border-box;
 
+	font-family: "Geologica", sans-serif;
+
 	::-webkit-scrollbar {
 		width: 8px;
 	}
 
 	::-webkit-scrollbar-track {
 		border-radius: var(--radius);
-		background: #958e8e;
+		background: var(--gray-light);
 	}
 
 	::-webkit-scrollbar-thumb {
 		border-radius: var(--radius);
-		background: #ff8000;
+		background: var(--blue-light);
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background: #e37c16;
+		background-color: var(--blue);
 	}
 }
 

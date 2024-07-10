@@ -34,5 +34,5 @@ export const TaskModalItem = ({
 			</div>
 			<p>{task.description}</p>
 		</div>
-	)
+	);
 }

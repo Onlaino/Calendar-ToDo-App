@@ -2,7 +2,7 @@ import './Day.css'
 import { ITask } from '../../interfaces/tasks.interface'
 import { useUser } from '../../hooks/useUserContext'
 import { IDayProps } from './Day.props'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useModal } from '../../hooks/useModal'
 
 export const Day = ({ date, tasks }: IDayProps) => {
@@ -16,20 +16,24 @@ export const Day = ({ date, tasks }: IDayProps) => {
 		return task.completed ? completedClass : unCompletedClass
 	}
 
+	const tasksForDay = useMemo(() => {
+    return tasks.filter(
+      task => task.date.split('T')[0] === date.toISOString().split('T')[0]
+    );
+  }, [tasks, date]);
+
 	useEffect(() => {
-		const tasksForDay = tasks.filter(
-			task => task.date.split('T')[0] === date.toISOString().split('T')[0]
-		)
 		setDayTasks(tasksForDay)
-	}, [user.tasks, date, tasks, setTasks])
+	},[tasksForDay])
 
 	return (
 		<div className='calendar__cells-cell-tasks'>
 			{dayTasks.map(task => (
 				<div className={calculateClassName(task)} key={task.id}>
-					{task.title.slice(0, 14) + '...'}
+					<span>&#8226;</span>&nbsp;
+					{task.title.slice(0, 10) + '...'}
 				</div>
 			))}
 		</div>
-	)
+	);
 }

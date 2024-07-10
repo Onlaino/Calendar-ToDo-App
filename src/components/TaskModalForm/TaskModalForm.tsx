@@ -9,7 +9,7 @@ export const TaskModalForm = ({
 	return (
 		<form className='modal__form' onSubmit={addTask}>
 			<div className='modal__form-title'>
-				<label htmlFor='task'>Добавить заголовок</label>
+				<label htmlFor='task'> &#9997;&nbsp;Добавить заголовок</label>
 				<input
 					required
 					className='modal__form-input'
@@ -21,7 +21,7 @@ export const TaskModalForm = ({
 				/>
 			</div>
 			<div className='modal__form-title'>
-				<label htmlFor='descr'>Опишите, что нужно сделать</label>
+				<label htmlFor='descr'> &#9997;&nbsp;Опишите, что нужно сделать</label>
 				<textarea
 					className='modal__form-textarea'
 					name='descr'
@@ -35,5 +35,5 @@ export const TaskModalForm = ({
 			</div>
 			<button className='modal__form-button'>Add task</button>
 		</form>
-	)
+	);
 }

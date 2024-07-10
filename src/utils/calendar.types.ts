@@ -5,4 +5,5 @@ export type TypeCalendarDay = {
 	inactive?: boolean
 	active?: boolean
 	tasks?: ITask[]
+	isDayOff: boolean
 }
