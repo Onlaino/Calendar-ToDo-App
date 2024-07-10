@@ -1,0 +1,24 @@
+.calendar {
+	width: 100%;
+	margin-top: 50px;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: var(--radius);
+	background-color: rgb(255, 255, 255);
+}
+
+.calendar__weekdays {
+	color: #858484;
+	margin-top: 15px;
+	list-style-type: none;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__weekdays-day {
+	color: black;
+	text-align: center;
+}
+

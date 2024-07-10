@@ -1,0 +1,43 @@
+:root {
+	/* colors */
+	--primary: #ffa500;
+	--gray-light: rgba(237, 237, 237, 0.214);
+	--gray-dark: #333333;
+
+	/* helpers */
+	--radius: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: var(--radius);
+		background: #958e8e;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: var(--radius);
+		background: #ff8000;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #e37c16;
+	}
+}
+
+body {
+	background-color: #333;
+}
+
+.main {
+	padding: 15px;
+	margin: 0 auto;
+	max-width: 1140px;
+}

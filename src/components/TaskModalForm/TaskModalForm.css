@@ -1,0 +1,82 @@
+.modal__form {
+	box-shadow: 0px 3px 5px var(--gray-dark);
+	border-radius: var(--radius);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.modal__form-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	gap: 5px;
+}
+
+.modal__form-title label {
+	font-size: 20px;
+	font-style: normal;
+	opacity: 0.7;
+}
+
+.modal__form-input {
+	background: transparent;
+	width: 100%;
+	font-style: italic;
+	border: none;
+	border: 2px solid transparent;
+	border-bottom: 2px solid var(--gray-dark);
+	outline: none;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.modal__form-input:focus {
+	transition: all 0.3s ease-in-out;
+	border: 2px solid var(--primary);
+	border-radius: var(--radius);
+}
+
+.modal__form-textarea {
+	background: transparent;
+	margin-top: 10px;
+	font-style: italic;
+	resize: none;
+	height: 70px;
+	border: 2px solid transparent;
+	border-bottom: 2px solid var(--gray-dark);
+	outline: none;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 0px;
+}
+
+.modal__form-textarea:focus {
+	transition: border 0.3s ease-in;
+	transition: border-radius 0.3s ease-in-out;
+	border-radius: var(--radius);
+	border: 2px solid var(--primary);
+}
+
+.modal__form-button {
+	font-size: 14px;
+	cursor: pointer;
+	padding: 10px 20px;
+	border: none;
+	border-radius: var(--radius);
+	outline: none;
+	border: 2px solid transparent;
+}
+
+.modal__form-button:active {
+	scale: .95;
+}
+
+.modal__form-button:hover {
+	transition: all .3s ease-in-out;
+	border: 2px solid var(--primary);
+}
+
+
