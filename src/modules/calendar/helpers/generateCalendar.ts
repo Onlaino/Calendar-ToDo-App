@@ -1,4 +1,4 @@
-import { ITask } from '../interfaces/tasks.interface'
+import { ITask } from '../../modal/types/tasks.interface.ts'
 
 async function checkIsDayOff(date: Date): Promise<boolean> {
 	const year = date.getFullYear();

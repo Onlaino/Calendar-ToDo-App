@@ -1,5 +1,5 @@
-import { ITask } from '../interfaces/tasks.interface'
-import { IUser } from '../interfaces/user.interface'
+import { ITask } from '../modules/modal/types/tasks.interface.ts'
+import { IUser } from '../modules/login/types/user.interface.ts'
 
 export class UserService {
 	private readonly BASE_URL = 'http://localhost:3000/users'

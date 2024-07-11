@@ -6,8 +6,8 @@ import {
 	SetStateAction,
 	useEffect,
 } from 'react'
-import { ITask } from '../../types/tasks.interface.ts'
-import { useUser } from '../../../../hooks/useUserContext.tsx'
+import { ITask } from '../../modules/modal/types/tasks.interface.ts'
+import { useUser } from '../../hooks/useUserContext.tsx'
 
 interface ModalContextType {
 	isOpen: boolean

@@ -1,8 +1,8 @@
 import { PropsWithChildren, createContext, useState } from 'react'
 import { TypeUserContext, UserType } from './types.userContext.ts'
-import { UserService } from '../../../../services/user.service.ts'
-import { IUser } from '../../types/user.interface.ts'
-import { useModal } from '../../../../hooks/useModal.ts'
+import { UserService } from '../../services/user.service.ts'
+import { IUser } from '../../modules/login/types/user.interface.ts'
+import { useModal } from '../../hooks/useModal.ts'
 
 const userService = new UserService()
 

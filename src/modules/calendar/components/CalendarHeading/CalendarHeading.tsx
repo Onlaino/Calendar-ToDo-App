@@ -1,5 +1,5 @@
 import './CalendarHeading.css';
-import { months } from '../../../utils/calendar.helpers.ts'
+import { months } from '../../helpers/calendar.helper.ts'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { ICalendarHeadingProps } from './CalendarHeading.props.ts'

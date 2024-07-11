@@ -1,14 +1,14 @@
-import { memo, useState } from 'react'
+import { memo, useState } from 'react';
 
-import './Calendar.css'
+import './Calendar.css';
 
-import { TasksModal } from '../../../components/TaskModal/TaskModal.tsx'
-import { CalendarCells } from '../CalendarCells/CalendarCells.tsx'
-import { CalendarHeading } from '../CalendarHeading/CalendarHeading.tsx'
-import { CalendarWeekdays } from '../CalendarWeekdays/CalendarWeekdays.tsx'
+import { TasksModal } from '../../../modal/components/TaskModal/TaskModal.tsx';
+import { CalendarCells } from '../CalendarCells/CalendarCells.tsx';
+import { CalendarHeading } from '../CalendarHeading/CalendarHeading.tsx';
+import { CalendarWeekdays } from '../CalendarWeekdays/CalendarWeekdays.tsx';
 
 export const Calendar = memo(() => {
-	const [date, setDate] = useState<Date>(new Date())
+	const [date, setDate] = useState<Date>(new Date());
 
 	return (
 		<section className='calendar'>
@@ -17,5 +17,5 @@ export const Calendar = memo(() => {
 			<CalendarWeekdays />
 			<CalendarCells date={date} />
 		</section>
-	)
-})
+	);
+});

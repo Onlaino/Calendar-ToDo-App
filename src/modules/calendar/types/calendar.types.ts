@@ -1,4 +1,4 @@
-import { ITask } from '../interfaces/tasks.interface'
+import { ITask } from '../../modal/types/tasks.interface.ts'
 
 export type TypeCalendarDay = {
 	day: Date

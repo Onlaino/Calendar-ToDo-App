@@ -1,4 +1,4 @@
-import { ITask } from '../../../modal/types/tasks.interface.ts'
+import { ITask } from '../../modules/modal/types/tasks.interface.ts'
 
 export type UserType = {
 	name?: string

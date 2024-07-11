@@ -1,15 +1,15 @@
 import './CalendarCells.css';
 import { Day } from '../Day/Day.tsx';
-import { useUser } from '../../../hooks/useUserContext.tsx';
-import { useModal } from '../../../hooks/useModal.ts';
-import { TypeCalendarDay } from '../../../utils/calendar.types.ts';
-import { generateCalendar } from '../../../utils/generateCalendar.ts';
+import { useUser } from '../../../../hooks/useUserContext.tsx';
+import { useModal } from '../../../../hooks/useModal.ts';
+import { TypeCalendarDay } from '../../types/calendar.types.ts';
+import { generateCalendar } from '../../helpers/generateCalendar.ts';
 import { useCallback, useEffect, useState } from 'react';
 
 export const CalendarCells = ({ date }: { date: Date }) => {
 	const { user } = useUser();
 	const [calendar, setCalendar] = useState<TypeCalendarDay[]>([]);
-	const { setTasks, setIsOpen, setSelectedDay, tasks } = useModal();
+	const { setIsOpen, setSelectedDay, tasks } = useModal();
 
 	const convertDate = (date: Date) => {
 		return date.toLocaleString().split(',')[0].split('/')[1];
@@ -30,15 +30,6 @@ export const CalendarCells = ({ date }: { date: Date }) => {
 		const calendarDays = await generateCalendar(date, user.tasks);
 		setCalendar(calendarDays);
 	}, [date, user.tasks, setCalendar]);
-
-	// useEffect(() => {
-	// 	async function fetchCalendarDays() {
-	// 		const calendarDays = await generateCalendar(date, user.tasks);
-	// 		setCalendar(calendarDays);
-	// 	}
-	// 	fetchCalendarDays().catch(console.error);
-	// 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	// }, [date, tasks, setTasks]);
 
 	useEffect(() => {
 		fetchCalendarDays().catch(console.error);

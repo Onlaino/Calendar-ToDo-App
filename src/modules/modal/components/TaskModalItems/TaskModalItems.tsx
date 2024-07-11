@@ -1,5 +1,5 @@
 import './TaskModalItems.css'
-import { ITask } from '../../../interfaces/tasks.interface.ts'
+import { ITask } from '../../types/tasks.interface.ts'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 
 export const TaskModalItem = ({

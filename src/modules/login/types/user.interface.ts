@@ -1,4 +1,4 @@
-import { ITask } from './tasks.interface';
+import { ITask } from '../../modal/types/tasks.interface.ts';
 
 export interface IUser {
 	id: string;
