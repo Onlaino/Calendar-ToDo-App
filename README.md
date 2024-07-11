@@ -1,6 +1,6 @@
-Как хранилище в проекте исользован json-server https://www.npmjs.com/package/json-server,
+Как хранилище в проекте исользован json-server (https://www.npmjs.com/package/json-server),
 в связи с этим некоторые запросы к "серверу" могут выглядеть неоптимизированно.
 
-Для тестирования и запуска приложения используйте 
--npm run dev
--npx json-server db.json
+Для тестирования и запуска приложения используйте (json-server и сервер разработки запускается одной командой)
+-npm install
+-npx start
