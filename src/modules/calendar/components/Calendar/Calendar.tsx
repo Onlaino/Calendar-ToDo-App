@@ -9,13 +9,21 @@ import { CalendarWeekdays } from '../CalendarWeekdays/CalendarWeekdays.tsx';
 
 export const Calendar = memo(() => {
 	const [date, setDate] = useState<Date>(new Date());
+	const [isDividerOpen, setIsDividerOpen] = useState(false);
 
 	return (
 		<section className='calendar'>
+			<button className='calendar__weektasks' onClick={() => setIsDividerOpen(true)}>
+				Показать задачи по неделям
+			</button>
 			<TasksModal />
 			<CalendarHeading date={date} setDate={setDate} />
 			<CalendarWeekdays />
-			<CalendarCells date={date} />
+			<CalendarCells
+				isDividerOpen={isDividerOpen}
+				setIsDividerOpen={setIsDividerOpen}
+				date={date}
+			/>
 		</section>
 	);
 });

@@ -1,12 +1,20 @@
+import { useCallback, useEffect, useState } from 'react';
+
 import './CalendarCells.css';
+
 import { Day } from '../Day/Day.tsx';
+import { Divider } from '../Divider/Divider.tsx';
 import { useUser } from '../../../../hooks/useUserContext.tsx';
 import { useModal } from '../../../../hooks/useModal.ts';
 import { TypeCalendarDay } from '../../types/calendar.types.ts';
 import { generateCalendar } from '../../helpers/generateCalendar.ts';
-import { useCallback, useEffect, useState } from 'react';
+import { ICalendarCellsProps } from './CalendarCells.props.ts';
 
-export const CalendarCells = ({ date }: { date: Date }) => {
+export const CalendarCells = ({
+	date,
+	isDividerOpen,
+	setIsDividerOpen,
+}: ICalendarCellsProps) => {
 	const { user } = useUser();
 	const [calendar, setCalendar] = useState<TypeCalendarDay[]>([]);
 	const { setIsOpen, setSelectedDay, tasks } = useModal();
@@ -37,27 +45,36 @@ export const CalendarCells = ({ date }: { date: Date }) => {
 	}, [fetchCalendarDays]);
 
 	return (
-		<ul className='calendar__cells'>
-			{calendar.map((item, index) => (
-				<li
-					onClick={() => handleDayClick(item)}
-					key={index}
-					className={calculateClassName(item)}
-				>
-					<span
-						className={
-							item.isDayOff
-								? 'calendar__cells-cell-day dayOff'
-								: 'calendar__cells-cell-day'
-						}
+		<>
+			<ul className='calendar__cells'>
+				{isDividerOpen && (
+					<Divider
+						tasks={tasks}
+						setIsDividerOpen={setIsDividerOpen}
+						calendar={calendar}
+					/>
+				)}
+				{calendar.map((item, index) => (
+					<li
+						onClick={() => handleDayClick(item)}
+						key={index}
+						className={calculateClassName(item)}
 					>
-						{convertDate(item.day)}
-					</span>
-					<div className='calendar__cells-cell-tasks'>
-						<Day tasks={tasks} date={item.day} />
-					</div>
-				</li>
-			))}
-		</ul>
+						<span
+							className={
+								item.isDayOff
+									? 'calendar__cells-cell-day dayOff'
+									: 'calendar__cells-cell-day'
+							}
+						>
+							{convertDate(item.day)}
+						</span>
+						<div className='calendar__cells-cell-tasks'>
+							<Day tasks={tasks} date={item.day} />
+						</div>
+					</li>
+				))}
+			</ul>
+		</>
 	);
 };
