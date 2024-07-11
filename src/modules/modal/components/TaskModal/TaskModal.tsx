@@ -1,15 +1,15 @@
 import './TaskModal.css';
 import './MediaTaskModal.css';
-import { ITask } from '../../interfaces/tasks.interface';
-import { useUser } from '../../hooks/useUserContext';
-import { useModal } from '../../hooks/useModal';
-import { TaskService } from '../../services/taskService';
+import { ITask } from '../../../interfaces/tasks.interface.ts';
+import { useUser } from '../../../hooks/useUserContext.tsx';
+import { useModal } from '../../../hooks/useModal.ts';
+import { TaskService } from '../../../services/taskService.ts';
 import { v4 as uuidv4 } from 'uuid';
-import { TaskModalForm } from '../TaskModalForm/TaskModalForm';
-import { TaskModalItem } from '../TaskModalItems/TaskModalItems';
+import { TaskModalForm } from '../TaskModalForm/TaskModalForm.tsx';
+import { TaskModalItem } from '../TaskModalItems/TaskModalItems.tsx';
 import { FormEventHandler, useEffect, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import { convertDate } from '../../utils/convertSelectedDay';
+import { convertDate } from '../../../utils/convertSelectedDay.ts';
 
 const taskService = new TaskService();
 

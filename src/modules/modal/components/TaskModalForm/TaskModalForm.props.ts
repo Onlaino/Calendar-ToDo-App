@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, FormEventHandler, HTMLAttributes } from 'react'
-import { ITask } from '../../interfaces/tasks.interface'
+import { ITask } from '../../../interfaces/tasks.interface.ts'
 
 export interface ITaskModalFormProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {

@@ -1,7 +1,7 @@
 import './LoginModal.css'
 import CloseIcon from '@mui/icons-material/Close'
-import { useUser } from '../../hooks/useUserContext'
-import { ILoginModal } from './LoginModal.props'
+import { useUser } from '../../../hooks/useUserContext.tsx'
+import { ILoginModal } from './LoginModal.props.ts'
 import { FormEventHandler, useEffect, useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 

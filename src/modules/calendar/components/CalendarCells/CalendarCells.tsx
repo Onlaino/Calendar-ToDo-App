@@ -1,9 +1,9 @@
 import './CalendarCells.css';
-import { Day } from '../Day/Day';
-import { useUser } from '../../hooks/useUserContext';
-import { useModal } from '../../hooks/useModal';
-import { TypeCalendarDay } from '../../utils/calendar.types';
-import { generateCalendar } from '../../utils/generateCalendar';
+import { Day } from '../Day/Day.tsx';
+import { useUser } from '../../../hooks/useUserContext.tsx';
+import { useModal } from '../../../hooks/useModal.ts';
+import { TypeCalendarDay } from '../../../utils/calendar.types.ts';
+import { generateCalendar } from '../../../utils/generateCalendar.ts';
 import { useCallback, useEffect, useState } from 'react';
 
 export const CalendarCells = ({ date }: { date: Date }) => {

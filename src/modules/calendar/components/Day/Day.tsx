@@ -1,6 +1,6 @@
 import './Day.css'
-import { ITask } from '../../interfaces/tasks.interface'
-import { IDayProps } from './Day.props'
+import { ITask } from '../../../interfaces/tasks.interface.ts'
+import { IDayProps } from './Day.props.ts'
 import { useEffect, useMemo, useState } from 'react'
 
 export const Day = ({ date, tasks }: IDayProps) => {

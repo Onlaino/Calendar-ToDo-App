@@ -1,4 +1,4 @@
-import { weekdays } from '../../utils/calendar.helpers'
+import { weekdays } from '../../../utils/calendar.helpers.ts'
 
 export const CalendarWeekdays = () => {
 	return (

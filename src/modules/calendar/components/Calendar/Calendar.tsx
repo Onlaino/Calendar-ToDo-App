@@ -2,9 +2,9 @@ import { memo, useState } from 'react'
 
 import './Calendar.css'
 
-import { TasksModal } from '../TaskModal/TaskModal'
-import { CalendarCells } from '../CalendarCells/CalendarCells'
-import { CalendarHeading } from '../CalendarHeading/CalendarHeading'
+import { TasksModal } from '../../../components/TaskModal/TaskModal.tsx'
+import { CalendarCells } from '../CalendarCells/CalendarCells.tsx'
+import { CalendarHeading } from '../CalendarHeading/CalendarHeading.tsx'
 import { CalendarWeekdays } from '../CalendarWeekdays/CalendarWeekdays.tsx'
 
 export const Calendar = memo(() => {

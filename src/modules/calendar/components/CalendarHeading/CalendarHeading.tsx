@@ -1,8 +1,8 @@
 import './CalendarHeading.css';
-import { months } from '../../utils/calendar.helpers'
+import { months } from '../../../utils/calendar.helpers.ts'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import { ICalendarHeadingProps } from './CalendarHeading.props'
+import { ICalendarHeadingProps } from './CalendarHeading.props.ts'
 
 export const CalendarHeading = ({ date, setDate }: ICalendarHeadingProps) => {
 	return (

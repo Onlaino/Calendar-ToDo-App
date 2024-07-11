@@ -1,6 +1,6 @@
 import '../../styles/global.css'
 import { Login } from '../Login/Login'
-import { Calendar } from '../Calendar/Calendar'
+import { Calendar } from '../../modules/calendar/Calendar/Calendar'
 import { UserContextProvider } from '../../context/UserContext/UserContext'
 import { ModalContextProvider } from '../../context/ModalContext/ModalContext'
 
