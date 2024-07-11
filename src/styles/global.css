@@ -6,6 +6,7 @@
 	--gray-dark: #333333;
 	--blue-light: #cbe2f5;
 	--blue: #4067b1;
+	--blue-dark: #1763f1;
 	
 	/* helpers */
 	--radius: 10px;
@@ -36,6 +37,8 @@
 		background-color: var(--blue);
 	}
 }
+
+
 
 body {
 	background-color: #333;

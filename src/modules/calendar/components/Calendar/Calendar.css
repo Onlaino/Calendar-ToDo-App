@@ -1,4 +1,5 @@
 .calendar {
+	position: relative;
 	width: 100%;
 	margin-top: 50px;
 	padding: 10px;
@@ -22,3 +23,23 @@
 	text-align: center;
 }
 
+
+.calendar__weektasks {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+
+	font-size: 18px;
+
+	position: absolute;
+	right: 10px;
+	top: 10px;
+
+	color: var(--blue);
+
+	transition: all .3s ease;
+}
+
+.calendar__weektasks:hover {
+	color: var(--blue-dark)
+}

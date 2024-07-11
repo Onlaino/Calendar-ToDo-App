@@ -1,14 +1,16 @@
+import { FormEventHandler, useEffect, useState } from 'react';
+
 import './TaskModal.css';
 import './MediaTaskModal.css';
+
+import CloseIcon from '@mui/icons-material/Close';
 import { ITask } from '../../types/tasks.interface.ts';
 import { useUser } from '../../../../hooks/useUserContext.tsx';
 import { useModal } from '../../../../hooks/useModal.ts';
 import { TaskService } from '../../../../services/taskService.ts';
 import { v4 as uuidv4 } from 'uuid';
-import { TaskModalForm } from '../TaskModalForm/TaskModalForm.tsx';
 import { TaskModalItem } from '../TaskModalItems/TaskModalItems.tsx';
-import { FormEventHandler, useEffect, useState } from 'react';
-import CloseIcon from '@mui/icons-material/Close';
+import { TaskModalForm } from '../TaskModalForm/TaskModalForm.tsx';
 import { convertDate } from '../../../calendar/helpers/convertSelectedDay.ts';
 
 const taskService = new TaskService();
@@ -39,8 +41,6 @@ export const TasksModal = () => {
 		filterTasks && setFilteredTasks(filterTasks);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [tasks, selectedDay]);
-
-	if (!isOpen) return null;
 
 	const handleAddTask: FormEventHandler<HTMLFormElement> = async e => {
 		e.preventDefault();
@@ -114,9 +114,11 @@ export const TasksModal = () => {
 		return <h4>Not found tasks for this day</h4>;
 	};
 
+	if (!isOpen) return null;
+
 	return (
 		<section className='modal__wrapper'>
-			<div className='modal'>
+			<div className={`modal ${isOpen && 'modal__animate'}`}>
 				<div className='modal__close' onClick={() => setIsOpen(false)}>
 					<CloseIcon />
 				</div>

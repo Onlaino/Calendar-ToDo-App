@@ -33,7 +33,7 @@ export const TaskModalForm = ({
 					}
 				></textarea>
 			</div>
-			<button className='modal__form-button'>Add task</button>
+			<button className='modal__form-button'>Добавить задачу</button>
 		</form>
 	);
 }

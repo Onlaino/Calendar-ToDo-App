@@ -1,0 +1,44 @@
+.divider__tasks {
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.divider__task {
+	padding: 5px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	background-color: #ffffff9e;
+	border-radius: var(--radius);
+	word-wrap: break-word;
+}
+
+
+.divider__task-head {
+	position: relative;
+	display: block;
+	font-size: 20px;
+	font-weight: normal;	
+	margin-bottom: 5px;
+}
+
+
+.divider__task-head::after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100px;
+	background-color: #ffffffa3;
+}
+
+.divider__task-descr {
+	word-wrap: break-word;
+	font-size: 16px;
+	color: gray;
+	max-width: 100%;
+	text-align: left;
+}
