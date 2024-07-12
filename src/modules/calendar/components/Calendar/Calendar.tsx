@@ -13,8 +13,12 @@ export const Calendar = memo(() => {
 
 	return (
 		<section className='calendar'>
-			<button className='calendar__weektasks' onClick={() => setIsDividerOpen(true)}>
-				Показать задачи по неделям
+			<button
+				className='calendar__weektasks'
+				onClick={() => setIsDividerOpen(true)}
+			>
+				{/* <DateRangeIcon color='info' /> */}
+				<img src='/calendarIcon.svg' alt='calendar weeks' />
 			</button>
 			<TasksModal />
 			<CalendarHeading date={date} setDate={setDate} />

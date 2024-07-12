@@ -43,7 +43,7 @@ ul {
 	list-style: none;
 }
 
-.divider__day-head { 	
+.divider__day-head {
 	width: 100%;
 	text-align: left;
 	margin: 0 auto;
@@ -64,7 +64,6 @@ ul {
 	}
 }
 
-
 .divider__day {
 	background-color: var(--blue-light);
 	border-radius: var(--radius);
@@ -81,9 +80,37 @@ ul {
 	transform: scale(1.05);
 }
 
-
 .divider__button:active {
 	transform: scale(0.95);
+}
+
+.divider__animate {
+	animation: dividerAnimate 0.35s ease-in;
+}
+
+.divider__animate-remove {
+	animation: removeDivider .35s ease-in-out;
+	animation-fill-mode: forwards; 
+}
+
+@keyframes removeDivider {
+	from {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(1000px);
+		opacity: 0;
+	}
+}
+
+@keyframes dividerAnimate {
+	from {
+		transform: translateX(1000px);
+	}
+	to {
+		transform: translateX(0px);
+	}
 }
 
 @media (max-width: 430px) {

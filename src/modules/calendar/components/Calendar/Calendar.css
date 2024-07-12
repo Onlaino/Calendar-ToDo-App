@@ -25,6 +25,9 @@
 
 
 .calendar__weektasks {
+	width: 30px;
+	height: 30px;
+
 	cursor: pointer;
 	background: transparent;
 	border: none;
@@ -32,7 +35,7 @@
 	font-size: 18px;
 
 	position: absolute;
-	right: 10px;
+	right: 20px;
 	top: 10px;
 
 	color: var(--blue);
@@ -41,5 +44,5 @@
 }
 
 .calendar__weektasks:hover {
-	color: var(--blue-dark)
+	transform: translateY(-3px);
 }
