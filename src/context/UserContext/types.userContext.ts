@@ -7,7 +7,8 @@ export type UserType = {
 }
 
 export type TypeUserContext = {
-	user: UserType
-	login: (name: string, userId: string) => void
-	logout: () => void
-}
+	user: UserType;
+	login: (name: string, userId: string) => void;
+	logout: () => void;
+	setUser: (user: UserType) => void;
+};

@@ -10,6 +10,7 @@ export const UserContext = createContext<TypeUserContext>({
 	user: { name: '', id: '', tasks: [] },
 	login: () => {},
 	logout: () => {},
+	setUser: () => {},
 })
 
 export const UserContextProvider = ({ children }: PropsWithChildren) => {
@@ -27,6 +28,14 @@ export const UserContextProvider = ({ children }: PropsWithChildren) => {
 					id: existingUser.id,
 					tasks: existingUser.tasks,
 				})
+				localStorage.setItem(
+					'user',
+					JSON.stringify({
+						name: existingUser.name,
+						id: existingUser.id,
+						tasks: existingUser.tasks,
+					})
+				);
 				return
 			}
 
@@ -42,6 +51,14 @@ export const UserContextProvider = ({ children }: PropsWithChildren) => {
 					id: newUser.id,
 					tasks: newUser.tasks,
 				})
+				localStorage.setItem(
+					'user',
+					JSON.stringify({
+						name: newUser.name,
+						id: newUser.id,
+						tasks: newUser.tasks,
+					})
+				);
 			} else {
 				throw new Error('Unable to create new user')
 			}
@@ -55,12 +72,13 @@ export const UserContextProvider = ({ children }: PropsWithChildren) => {
 			name: '',
 			id: '',
 			tasks: [],
-		})
+		});
 		setTasks([]);
+		localStorage.removeItem('user');
 	}
 
 	return (
-		<UserContext.Provider value={{ login, logout, user }}>
+		<UserContext.Provider value={{ login, logout, user, setUser }}>
 			{children}
 		</UserContext.Provider>
 	)

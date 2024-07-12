@@ -3,12 +3,12 @@ import { useUser } from '../../../../hooks/useUserContext.tsx'
 import LoginIcon from '@mui/icons-material/Login'
 import Face6Icon from '@mui/icons-material/Face6'
 import LogoutIcon from '@mui/icons-material/Logout'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LoginModal } from '../LoginModal/LoginModal.tsx'
 
 export const Login = () => {
-	const { user, logout } = useUser()
-	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const { user, logout, setUser } = useUser();
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const loginButtonBlock = (
 		<div className='login__wrapper'>
@@ -18,6 +18,13 @@ export const Login = () => {
 			<LoginIcon className='login-icon' />
 		</div>
 	)
+
+	useEffect(() => {
+		const storedUser = localStorage.getItem('user');
+		if (storedUser) {
+			setUser(JSON.parse(storedUser));
+		}
+	}, [setUser]);
 
 	const userInfoBlock = (
 		<h2 className='login__user'>
