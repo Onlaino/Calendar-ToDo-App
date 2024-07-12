@@ -17,7 +17,6 @@ export const Calendar = memo(() => {
 				className='calendar__weektasks'
 				onClick={() => setIsDividerOpen(true)}
 			>
-				{/* <DateRangeIcon color='info' /> */}
 				<img src='/calendarIcon.svg' alt='calendar weeks' />
 			</button>
 			<TasksModal />

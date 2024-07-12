@@ -2,14 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 
 import './CalendarCells.css';
 
-import { Day } from '../Day/Day.tsx';
 import { Divider } from '../Divider/Divider.tsx';
 import { useUser } from '../../../../hooks/useUserContext.tsx';
 import { useModal } from '../../../../hooks/useModal.ts';
 import { TypeCalendarDay } from '../../types/calendar.types.ts';
 import { generateCalendar } from '../../helpers/generateCalendar.ts';
 import { ICalendarCellsProps } from './CalendarCells.props.ts';
-import { convertDateForCell } from '../../helpers/convertDate.ts';
+import { CalendarCell } from '../CalendarCell/CalendarCell.tsx';
 
 export const CalendarCells = ({
 	date,
@@ -20,11 +19,6 @@ export const CalendarCells = ({
 	const [calendar, setCalendar] = useState<TypeCalendarDay[]>([]);
 	const { setIsOpen, setSelectedDay, tasks } = useModal();
 
-	const calculateClassName = (item: TypeCalendarDay) => {
-		const activeClass = item.active ? 'active' : '';
-		const inactiveClass = item.inactive ? 'inactive' : '';
-		return `calendar__cells-cell ${activeClass} ${inactiveClass}`;
-	};
 
 	const handleDayClick = async (calendarDay: TypeCalendarDay) => {
 		setSelectedDay(calendarDay.day);
@@ -51,25 +45,12 @@ export const CalendarCells = ({
 						calendar={calendar}
 					/>
 				)}
-				{calendar.map((item, index) => (
-					<li
-						onClick={() => handleDayClick(item)}
-						key={index}
-						className={calculateClassName(item)}
-					>
-						<span
-							className={
-								item.isDayOff
-									? 'calendar__cells-cell-day dayOff'
-									: 'calendar__cells-cell-day'
-							}
-						>
-							{convertDateForCell(item.day)}
-						</span>
-						<div className='calendar__cells-cell-tasks'>
-							<Day tasks={tasks} date={item.day} />
-						</div>
-					</li>
+				{calendar.map((item) => (
+					<CalendarCell
+						item={item}
+						handleDayClick={handleDayClick}
+						key={item.day.toISOString()}
+					/>
 				))}
 			</ul>
 		</>

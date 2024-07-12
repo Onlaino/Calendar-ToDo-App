@@ -9,7 +9,7 @@
           "title": "123",
           "description": "123",
           "date": "2024-06-30T21:00:00.000Z",
-          "completed": false
+          "completed": true
         },
         {
           "id": "6b6ce11d-72e1-419b-9d07-6cc067a44d95",
@@ -23,7 +23,7 @@
           "title": "4312",
           "description": "4312",
           "date": "2024-07-04T21:00:00.000Z",
-          "completed": false
+          "completed": true
         },
         {
           "id": "f1a74821-60ff-42fd-9760-4a2e03e419e8",
@@ -33,31 +33,38 @@
           "completed": false
         },
         {
-          "id": "d9499fd3-ba90-4496-84b3-2f165cdc7a55",
-          "title": "фывафыва",
-          "description": "фывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафывафыва",
-          "date": "2024-07-01T21:00:00.000Z",
-          "completed": true
-        },
-        {
           "id": "7351cb06-8749-4398-bdaf-7f4dc78884ec",
           "title": "ssss",
           "description": "sssssss",
           "date": "2024-07-11T21:00:00.000Z",
-          "completed": false
+          "completed": true
         },
         {
           "id": "e69ed86a-b45c-4d14-b040-49f43b5f3f3a",
           "title": "ssssssssssss",
           "description": "sssssssssssssssssssssssssssssssssssssss",
           "date": "2024-07-11T21:00:00.000Z",
-          "completed": false
+          "completed": true
         },
         {
-          "id": "800fbecf-65a9-485d-8187-d5fd732547b8",
-          "title": "asdfa",
-          "description": "sdf",
           "date": "2024-07-11T21:00:00.000Z",
+          "id": "02d5582f-c467-4a39-ad40-f24eab137f65",
+          "title": "Task title",
+          "description": "Task description",
+          "completed": true
+        },
+        {
+          "id": "03dc7963-d361-4034-a5b8-fcdb54c0b627",
+          "title": "some task",
+          "description": "some tot do",
+          "date": "2024-07-11T21:00:00.000Z",
+          "completed": true
+        },
+        {
+          "id": "3f31fed6-ac83-4a2a-80d9-c26a2e338583",
+          "title": "aaa",
+          "description": "adffff",
+          "date": "2024-08-09T21:00:00.000Z",
           "completed": false
         }
       ]
@@ -91,6 +98,33 @@
           "title": "Прочесть тестовое задание",
           "description": "Описать README.md, что было сделано, как запускать проект и.т. д",
           "date": "2024-07-12T21:00:00.000Z",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "44e2e234-f89f-432c-bc88-bbeea01029da",
+      "name": "Alex",
+      "tasks": [
+        {
+          "id": "6e73e82c-bfaa-45b6-b948-ccb4918d0b46",
+          "title": "Собрать вещи в аэропорт",
+          "description": "срочно",
+          "date": "2024-07-11T21:00:00.000Z",
+          "completed": false
+        },
+        {
+          "id": "ffed7565-a5f0-4129-8fb1-0b2ce571960a",
+          "title": "Поехать к олегу",
+          "description": "",
+          "date": "2024-07-11T21:00:00.000Z",
+          "completed": false
+        },
+        {
+          "id": "34a2039e-e7cd-47c7-8ffe-813d1a6041fd",
+          "title": "Оставить машину у олега",
+          "description": "",
+          "date": "2024-07-11T21:00:00.000Z",
           "completed": false
         }
       ]
