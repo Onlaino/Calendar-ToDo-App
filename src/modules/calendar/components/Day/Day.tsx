@@ -18,6 +18,11 @@ export const Day = ({ date, tasks }: IDayProps) => {
     );
   }, [tasks, date]);
 
+	const renderTitle = (title: string) => {
+		if (title.length >= 10) return title.slice(0, 10) + '...';
+		return title;
+	}
+
 	useEffect(() => {
 		setDayTasks(tasksForDay)
 	},[tasksForDay])
@@ -27,7 +32,7 @@ export const Day = ({ date, tasks }: IDayProps) => {
 			{dayTasks.map(task => (
 				<div className={calculateClassName(task)} key={task.id}>
 					<span>&#8226;</span>&nbsp;
-					{task.title.slice(0, 10) + '...'}
+					{renderTitle(task.title)}
 				</div>
 			))}
 		</div>
