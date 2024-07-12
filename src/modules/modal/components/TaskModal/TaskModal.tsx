@@ -117,7 +117,7 @@ export const TasksModal = () => {
 			));
 		}
 
-		return <h4>Not found tasks for this day</h4>;
+		return <h4>Нет задач для этого дня</h4>;
 	};
 
 	if (!isOpen) return null;
