@@ -9,6 +9,7 @@ import { useModal } from '../../../../hooks/useModal.ts';
 import { TypeCalendarDay } from '../../types/calendar.types.ts';
 import { generateCalendar } from '../../helpers/generateCalendar.ts';
 import { ICalendarCellsProps } from './CalendarCells.props.ts';
+import { convertDateForCell } from '../../helpers/convertDate.ts';
 
 export const CalendarCells = ({
 	date,
@@ -18,10 +19,6 @@ export const CalendarCells = ({
 	const { user } = useUser();
 	const [calendar, setCalendar] = useState<TypeCalendarDay[]>([]);
 	const { setIsOpen, setSelectedDay, tasks } = useModal();
-
-	const convertDate = (date: Date) => {
-		return date.toLocaleString().split(',')[0].split('/')[1];
-	};
 
 	const calculateClassName = (item: TypeCalendarDay) => {
 		const activeClass = item.active ? 'active' : '';
@@ -67,7 +64,7 @@ export const CalendarCells = ({
 									: 'calendar__cells-cell-day'
 							}
 						>
-							{convertDate(item.day)}
+							{convertDateForCell(item.day)}
 						</span>
 						<div className='calendar__cells-cell-tasks'>
 							<Day tasks={tasks} date={item.day} />
