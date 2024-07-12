@@ -5,13 +5,6 @@
       "name": "a",
       "tasks": [
         {
-          "id": "ade43617-0cc1-4bd6-9975-eb40bc651d0f",
-          "title": "123",
-          "description": "123",
-          "date": "2024-06-30T21:00:00.000Z",
-          "completed": true
-        },
-        {
           "id": "6b6ce11d-72e1-419b-9d07-6cc067a44d95",
           "title": "asdf",
           "description": "asdf",
@@ -19,39 +12,11 @@
           "completed": false
         },
         {
-          "id": "ec8700dc-edd1-4457-917c-b73d84acd361",
-          "title": "4312",
-          "description": "4312",
-          "date": "2024-07-04T21:00:00.000Z",
-          "completed": true
-        },
-        {
-          "id": "f1a74821-60ff-42fd-9760-4a2e03e419e8",
-          "title": "123",
-          "description": "321",
-          "date": "2024-07-18T21:00:00.000Z",
-          "completed": false
-        },
-        {
-          "id": "e69ed86a-b45c-4d14-b040-49f43b5f3f3a",
-          "title": "ssssssssssss",
-          "description": "sssssssssssssssssssssssssssssssssssssss",
-          "date": "2024-07-11T21:00:00.000Z",
-          "completed": false
-        },
-        {
           "date": "2024-07-11T21:00:00.000Z",
           "id": "02d5582f-c467-4a39-ad40-f24eab137f65",
           "title": "Task title",
           "description": "Task description",
-          "completed": true
-        },
-        {
-          "id": "03dc7963-d361-4034-a5b8-fcdb54c0b627",
-          "title": "some task",
-          "description": "some tot do",
-          "date": "2024-07-11T21:00:00.000Z",
-          "completed": true
+          "completed": false
         },
         {
           "id": "3f31fed6-ac83-4a2a-80d9-c26a2e338583",
@@ -121,6 +86,11 @@
           "completed": false
         }
       ]
+    },
+    {
+      "id": "7a74aefa-dc1e-4603-bca0-e3e462247583",
+      "name": "Test",
+      "tasks": []
     }
   ]
 }

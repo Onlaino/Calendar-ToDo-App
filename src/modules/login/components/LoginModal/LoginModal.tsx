@@ -37,18 +37,18 @@ export const LoginModal = ({ setIsOpen }: ILoginModal) => {
 					<CloseIcon />
 				</span>
 				<label className='login__form-label' htmlFor='name'>
-					Type name
+					Введите имя
 				</label>
 				<input
 					ref={inputRef}
 					required
 					className='login__form-input'
-					placeholder='type name'
+					placeholder='Введите имя'
 					value={name}
 					onChange={e => setName(e.target.value)}
 				/>
-				<button className='login__form-button'>Login</button>
+				<button className='login__form-button'>Войти</button>
 			</form>
 		</div>
-	)
+	);
 }
