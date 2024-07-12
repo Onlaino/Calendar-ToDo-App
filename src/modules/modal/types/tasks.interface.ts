@@ -4,7 +4,7 @@ export interface ITasks {
 
 export interface ITask {
 	id: string
-	date: string 
+	date: string
 	title: string
 	description: string
 	completed: boolean

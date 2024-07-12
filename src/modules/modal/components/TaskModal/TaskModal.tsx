@@ -48,7 +48,13 @@ export const TasksModal = () => {
 			alert('Войдите в систему для добавления задач!');
 			return;
 		}
-		const newTask = { ...formTask, date: selectedDay, id: uuidv4() };
+		// const newTask = { ...formTask, date: selectedDay, id: uuidv4() };
+
+		const newTask = {
+			...formTask,
+			date: selectedDay ? selectedDay.toISOString() : new Date().toISOString(),
+			id: uuidv4(),
+		};
 
 		try {
 			const userWithAddedTask = await taskService.addTaskByUserId(
