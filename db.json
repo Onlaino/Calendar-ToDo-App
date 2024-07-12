@@ -16,7 +16,7 @@
           "title": "asdf",
           "description": "asdf",
           "date": "2024-07-01T21:00:00.000Z",
-          "completed": true
+          "completed": false
         },
         {
           "id": "ec8700dc-edd1-4457-917c-b73d84acd361",
@@ -33,18 +33,11 @@
           "completed": false
         },
         {
-          "id": "7351cb06-8749-4398-bdaf-7f4dc78884ec",
-          "title": "ssss",
-          "description": "sssssss",
-          "date": "2024-07-11T21:00:00.000Z",
-          "completed": true
-        },
-        {
           "id": "e69ed86a-b45c-4d14-b040-49f43b5f3f3a",
           "title": "ssssssssssss",
           "description": "sssssssssssssssssssssssssssssssssssssss",
           "date": "2024-07-11T21:00:00.000Z",
-          "completed": true
+          "completed": false
         },
         {
           "date": "2024-07-11T21:00:00.000Z",
