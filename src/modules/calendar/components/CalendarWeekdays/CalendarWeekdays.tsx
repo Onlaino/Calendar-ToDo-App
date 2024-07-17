@@ -1,6 +1,7 @@
-import { weekdays } from '../../helpers/calendar.helper.ts'
+import { memo } from 'react';
+import { weekdays } from '../../helpers/calendar.helper.ts';
 
-export const CalendarWeekdays = () => {
+export const CalendarWeekdays = memo(() => {
 	return (
 		<ul className='calendar__weekdays'>
 			{weekdays.map((wd, i) => (
@@ -9,5 +10,5 @@ export const CalendarWeekdays = () => {
 				</li>
 			))}
 		</ul>
-	)
-}
+	);
+});

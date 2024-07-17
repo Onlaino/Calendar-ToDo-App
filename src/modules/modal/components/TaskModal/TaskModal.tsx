@@ -1,4 +1,4 @@
-import { FormEventHandler, useEffect, useState } from 'react';
+import { FormEventHandler, memo, useEffect, useState } from 'react';
 
 import './TaskModal.css';
 import './MediaTaskModal.css';
@@ -15,7 +15,7 @@ import { convertDate } from '../../../calendar/helpers/convertSelectedDay.ts';
 
 const taskService = new TaskService();
 
-export const TasksModal = () => {
+export const TasksModal = memo(() => {
 	const { user } = useUser();
 	const { isOpen, setIsOpen, setTasks, tasks, selectedDay } = useModal();
 	const [filteredTasks, setFilteredTasks] = useState<ITask[]>([]);
@@ -145,4 +145,4 @@ export const TasksModal = () => {
 			</div>
 		</section>
 	);
-};
+});

@@ -1,9 +1,9 @@
 import './Day.css'
 import { ITask } from '../../../modal/types/tasks.interface.ts'
 import { IDayProps } from './Day.props.ts'
-import { useEffect, useMemo, useState } from 'react'
+import { memo, useEffect, useMemo, useState } from 'react'
 
-export const Day = ({ date, tasks }: IDayProps) => {
+export const Day = memo(({ date, tasks }: IDayProps) => {
 	const [dayTasks, setDayTasks] = useState<ITask[]>([])
 
 	const calculateClassName = (task: ITask) => {
@@ -37,4 +37,4 @@ export const Day = ({ date, tasks }: IDayProps) => {
 			))}
 		</div>
 	);
-}
+})

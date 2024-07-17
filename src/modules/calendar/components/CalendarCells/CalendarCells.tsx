@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { memo, useCallback, useEffect, useState } from 'react';
 
 import './CalendarCells.css';
 
@@ -10,7 +10,7 @@ import { generateCalendar } from '../../helpers/generateCalendar.ts';
 import { ICalendarCellsProps } from './CalendarCells.props.ts';
 import { CalendarCell } from '../CalendarCell/CalendarCell.tsx';
 
-export const CalendarCells = ({
+export const CalendarCells = memo(({
 	date,
 	isDividerOpen,
 	setIsDividerOpen,
@@ -18,7 +18,6 @@ export const CalendarCells = ({
 	const { user } = useUser();
 	const [calendar, setCalendar] = useState<TypeCalendarDay[]>([]);
 	const { setIsOpen, setSelectedDay, tasks } = useModal();
-
 
 	const handleDayClick = async (calendarDay: TypeCalendarDay) => {
 		setSelectedDay(calendarDay.day);
@@ -55,4 +54,4 @@ export const CalendarCells = ({
 			</ul>
 		</>
 	);
-};
+});
